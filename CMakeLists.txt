@@ -9,4 +9,4 @@ link_directories("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/lib/x
 
 #find_package(OpenCV REQUIRED)
 #include_directories( ${OpenCV_INCLUDE_DIRS})
-SUBDIRS( ch1 ch2)		
+SUBDIRS( ch1 ch2 ch3)		
