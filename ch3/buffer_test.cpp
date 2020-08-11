@@ -25,7 +25,8 @@ const char* kernelSrc =
 
 #define KERNEL_FUNC "blank"
 
-int main() {
+int main() 
+{
 
    /* OpenCL data structures */   
    cl_int i, j, err;
