@@ -23,7 +23,7 @@ using std::size_t;
 
 const std::string kernelCode = R"(
 __constant sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE |  CLK_ADDRESS_CLAMP | CLK_FILTER_NEAREST; 
-
+//__constant sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE |  CLK_ADDRESS_CLAMP | CLK_FILTER_LINEAR;
 __kernel void scaleImg(read_only image2d_t src_image,
                         write_only image2d_t dst_image) {
 
@@ -52,10 +52,8 @@ void setupImgData(uint8_t* imgData,const int height, const int width)
     {
         for (int x = 0; x < width; x++)
         {
-            int parityX = (x / blockWidth) & 1;
-            int parityY = (y / blockHeight) & 1;
-            uint8_t intensity = (parityX ^ parityY) ? 64 : 192;
-            imgData[y * width + x] = intensity;
+            
+            imgData[y * width + x] = (x)&1?0xff:0x1;
         }
     }
 }

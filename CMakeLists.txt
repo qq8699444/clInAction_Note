@@ -12,4 +12,4 @@ find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS})
 
 
-SUBDIRS( ch1 ch2 ch3 ch4 ch5 ch6)		
+SUBDIRS( ch1 ch2 ch3 ch4 ch5 ch6 ch7)		

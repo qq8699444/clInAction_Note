@@ -23,7 +23,7 @@ void showImage(uint8_t* imgData, const int width, const int height,int channel )
 
     cv::imshow("img", img);
 
-    imwrite("111.jpg", img);
+    //imwrite("111.jpg", img);
 
-    cv::waitKey(300);
+    cv::waitKey(0);
 }
